@@ -8,15 +8,19 @@ body {
 @media only screen and (min-width: 820px) {
   section.aboutme,
   section.projects {
-    display: inline-table;
     width: 100%;
-  }
-  div.cells {
-    display: table-cell;
-    width: 33.333333%;
+    background-color: white;
   }
   div.projectlist {
-    display: table-row;
+    overflow: auto;
+  }
+  div.cells {
+    width: 33.333333%;
+    float: left;
+  }
+  div.cells.cell-center {
+    margin: 0 auto;
+    float: none;
   }
   div.box {
     margin: 0.5em;
@@ -40,7 +44,12 @@ ul.projects > li {
   list-style: circle;
 }
 
-div.box-image > img {
+div.box-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+div.box-image img {
   max-width: 100%;
   cursor: pointer;
 }
