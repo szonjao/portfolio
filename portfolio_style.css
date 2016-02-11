@@ -6,7 +6,6 @@ body {
 }
 
 @media only screen and (min-width: 820px) {
-  section.aboutme,
   section.projects {
     width: 100%;
     background-color: white;
@@ -15,16 +14,12 @@ body {
     overflow: auto;
     border-top: 1px solid #456C6B;
   }
-  div.cells {
-    width: 33.333333%;
-    float: left;
-  }
   div.cells.cell-center {
     margin: 0 auto;
     float: none;
   }
   div.box {
-    margin: 0.5em;
+   /* margin: 0.5em;*/
   }
 }
 
@@ -33,7 +28,9 @@ body {
     font-size: 0.6rem;
   }
 }  
-body >h1 {font-size: 1.5em;
+
+body >h1 {
+  font-size: 1.5em;
 }
 
 ul.projects {
@@ -55,24 +52,81 @@ div.box-image img {
   cursor: pointer;
 }
 
-.masthead-heading,
-.masthead-intro,
-.content-footer,
-.masthead-text {
+#thisyear {
+  display: block;
+  position: relative;
+  top: -59px;
+  visibility: hidden;
+}
+
+.projectlist {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.content-footer {
    text-align: center;
 }
-.masthead
-{
-  padding: 4em 0;
+
+#navhead {
+ width: 100%;
+ padding-left: 0.5em;
+ padding-right: 1em;
+ background-color: #456C6B;
+ position: fixed;
+ padding-bottom: 0.5em;
+ padding-top: 0.5em;
+}
+
+#title-line {
+  /*font-family: "Open Sans", "Helvetica Neue", sans serif;*/
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-size: 1em;
+  display: inline-block;
+  color: white;
+}
+
+#navigation {
+  float: right;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.navibutton {
+  background-color: white;
+  border: none;
+  color: #456C6B;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.imagehead {
   background-image: url('http://i.imgur.com/aRBbIMS.jpg');
   background-size: cover;
   border-top: 0.5em solid #456C6B;
-  font-family: "Open Sans", "Helvetica Neue", sans serif;
-  font-weight: bold;
-  font-size: 3em;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  max-height: 4em;
+  /*max-height: 4em;*/
+  height: 30em;
+  display: flex;
+  padding-top:2.5em;
+}
+
+.cells {
+  width: 33%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+  padding-top: 1em;
+}
+
+.aboutme {
+  width: 33%;
+  background-color: white;
+  align-self: center;
+  padding: 1em;
 }
 
 section.projects >h1 {
@@ -87,29 +141,19 @@ section.projects >h1 {
   .masthead-text {
     font-size: 1.3em;
   } 
-  .masthead {
-    padding: 2em 0;
-  }
 }
-.masthead-intro {
-  margin-bottom: 0.1em;
-  font-family: "Gentium Book Basic", Georgia, serif;
-  font-size: 2em;
-}
-.masthead-intro,
-.masthead-text,
+
 .content-footer {
   margin-bottom: 0.1em;
 }
-.masthead-heading,
+
 .masthead-intro {
   margin-top: -1.1em;
 }
-.masthead-text {
-  font-weight: normal;
-  text-transform: none;
-  font-size: 1.6em;
-  margin: 0 auto;
+
+.projects {
+  padding-left: 0.5em;
+  padding-top: 1em;
 }
 
 .content-footer >p,
@@ -117,6 +161,10 @@ section.projects >h1 {
   /* Typography Declarations */
   font-weight: 300;
   letter-spacing: 0.05em;
+}
+
+h1 {
+  margin: 0;
 }
 
 h2 {
@@ -132,15 +180,19 @@ a {
   text-decoration: none;
 }
 
-.box,
+
 .footer-content {
   margin-left: auto;
   margin-right: auto;
-  max-width: 40em;
+  width: 100%;
   margin-top: 2em;
 }
 
+.box {
+  float: right;
+  background-color: white;
 }
+
 .social >li {
   diplay: inline-block; 
 }
